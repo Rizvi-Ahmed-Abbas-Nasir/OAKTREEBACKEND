@@ -10,12 +10,11 @@ export const contactMail = async (req, res) => {
     phoneNumber,
     message,
     country,
-    financialGoal,
-    postRetirementGoals,
     dob,
     contactTime,
     address,
     contactDetails,
+    items
 } = req.body;
 
 
@@ -72,8 +71,6 @@ export const contactMail = async (req, res) => {
       <li>Phone Number: <b>${phoneNumber}</b></li>
       <li>Your Message: <b>${message}</b></li>
       <li>Country of Residence: <b>${country}</b></li>
-      <li>Your Financial Goal/Concern: <b>${financialGoal}</b></li>
-      <li>Your Post-Retirement Goals: <b>${postRetirementGoals}</b></li>
       <li>Date of Birth: <b>${dob}</b></li>
       <li>Preferred Contact Method/Time: <b>${contactTime}</b></li>
       <li>Address: <b>${address}</b></li>
@@ -81,7 +78,7 @@ export const contactMail = async (req, res) => {
 
     </ul>
     <p>
-    The submitter has provided the above information and expressed their preferences for communication. Please follow up with them at your earliest convenience based on their preferred contact method and time.
+       The submitter has expressed interest in <b>${items}</b> and has provided their contact information for further communication. Kindly assign a team member to follow up with them at your earliest convenience.    </p>
     </p>
     <br>
     Thank you.
