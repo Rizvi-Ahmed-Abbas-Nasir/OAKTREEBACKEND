@@ -34,12 +34,13 @@ export const contactMail = async (req, res) => {
     phoneNumber,
     message,
     country,
-    financialGoal,
-    postRetirementGoals,
+   
     dob,
     contactTime,
     address,
     contactDetails,
+    items
+
   });
 
   const transporter = nodemailer.createTransport({
@@ -57,6 +58,9 @@ export const contactMail = async (req, res) => {
     from: `"OakTree" <${sender}>`,
     to: [
       "riteshmaurya3006@gmail.com",
+      "uma@oaktree.in",
+      "uma_velan@yahoo.com",
+
     
     ],
     subject: `OakTree - New Contact Form Submission from ${fullName}`,
